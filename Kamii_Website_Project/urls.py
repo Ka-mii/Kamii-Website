@@ -15,14 +15,9 @@ Including another URLconf
 """
 # helloworld_project/urls.py
 from django.contrib import admin
-from django.urls import path, include # new
-from django.views.generic.base import TemplateView # new
-
-# app_name = 'users'
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('users/', include('users.urls')), # new
-    path('users/', include('django.contrib.auth.urls')), # new
-    path('', include('pages.urls')), # new
+    path('', include('pages.urls')),
 ]
